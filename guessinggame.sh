@@ -12,7 +12,12 @@ do
         then
                 echo "Your guess is correct"
                 break
-        else
+        elif [[ $guess -gt count ]]
+        then
+                echo "Your guess is higher"
+        elif [[ $guess -lt count ]]
+                echo "Your guess is lower"
+        else    
                 echo "Try again :3"
         fi
 done
